@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 
-using OpenCards.Shared.Collections.Extensions;
+using OpenCards.Collections.Extensions;
 
 namespace OpenCards.Collections.Indexes;
 

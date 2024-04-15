@@ -1,4 +1,4 @@
-﻿namespace OpenCards.Shared.Assertation;
+﻿namespace OpenCards.Assertation;
 
 public static class Assert
 {

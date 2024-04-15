@@ -1,4 +1,4 @@
-﻿namespace OpenCards.Shared.Collections.Extensions;
+﻿namespace OpenCards.Collections.Extensions;
 
 public static class ArrayExtension
 {

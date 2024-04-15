@@ -1,5 +1,5 @@
-﻿using OpenCards.Collections.Extensions;
-using OpenCards.Shared.Assertation;
+﻿using OpenCards.Assertation;
+using OpenCards.Collections.Extensions;
 
 namespace OpenCards.Collections.Players;
 

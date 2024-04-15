@@ -1,6 +1,4 @@
-﻿using System.Text;
-
-namespace OpenCards.Shared.Assertation;
+﻿namespace OpenCards.Assertation;
 
 public class AssertException : Exception
 {
