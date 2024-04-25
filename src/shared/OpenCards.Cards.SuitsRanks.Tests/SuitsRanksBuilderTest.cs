@@ -3,11 +3,21 @@ namespace OpenCards.Cards.SuitsRanks.Tests;
 public class SuitsRanksBuilderTest
 {
     [Fact]
-    public void Create_Full() => CreateTest(from: Rank.Two, to: Rank.Ace, SuitRankBuilder.Full());
+    public void Should_Create_Full() => CreateTest(from: Rank.Two, to: Rank.Ace, SuitRankBuilder.Full());
     [Fact]
-    public void Create_Medium() => CreateTest(from: Rank.Six, to: Rank.Ace, SuitRankBuilder.Medium());
+    public void Should_Create_Medium() => CreateTest(from: Rank.Six, to: Rank.Ace, SuitRankBuilder.Medium());
     [Fact]
-    public void Create_Small() => CreateTest(from: Rank.Seven, to: Rank.Ace, SuitRankBuilder.Small());
+    public void Should_Create_Small() => CreateTest(from: Rank.Seven, to: Rank.Ace, SuitRankBuilder.Small());
+
+    [Fact]
+    public void Should_Repeat_Medium_Twise()
+    {
+        SuitRankCard[] expected = [.. SuitRankBuilder.Medium(), .. SuitRankBuilder.Medium()];
+
+        SuitRankCard[] actual = SuitRankBuilder.Medium().Repeat(times: 2);
+
+        Assert.True(actual.SequenceEqual(expected));
+    }
 
     private static void CreateTest(Rank from, Rank to, SuitRankCard[] deck)
     {
