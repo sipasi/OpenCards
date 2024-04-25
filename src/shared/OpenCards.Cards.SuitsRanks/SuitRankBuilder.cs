@@ -1,6 +1,6 @@
 ﻿namespace OpenCards.Cards.SuitsRanks;
 
-public class SuitRankBuilder
+public static class SuitRankBuilder
 {
     /// <summary>
     /// Size is 52. Create from <see cref="Rank.Two"/> to <see cref="Rank.Ace"/> 
@@ -44,5 +44,35 @@ public class SuitRankBuilder
         }
 
         return cards.ToArray();
+    }
+
+    /// <summary>
+    /// Repeats the specified array of SuitRankCard objects a specified number of times.
+    /// This method creates a new array with a length equal to the length of the input array multiplied by the 'times' parameter.
+    /// It then copies the elements of the input array 'times' times into the new array, ensuring that the original order of elements is preserved.
+    /// </summary>
+    /// <param name="cards">The array of SuitRankCard objects to repeat.</param>
+    /// <param name="times">The number of times to repeat the array.</param>
+    /// <returns>
+    /// A new array containing the elements of the input array repeated the specified number of times.
+    /// </returns>
+    /// <exception cref="System.ArgumentException">
+    /// Thrown when the 'times' parameter is less than 1.
+    /// </exception> 
+    public static SuitRankCard[] Repeat(this SuitRankCard[] cards, int times)
+    {
+        if (times < 1)
+        {
+            throw new ArgumentException();
+        }
+
+        SuitRankCard[] result = new SuitRankCard[cards.Length * times];
+
+        for (int i = 0; i < times; i++)
+        {
+            cards.CopyTo(result, i * cards.Length);
+        }
+
+        return result;
     }
 }
