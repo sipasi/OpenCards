@@ -1,5 +1,5 @@
 ﻿using System.Collections;
- 
+
 namespace OpenCards.Collections.Hands;
 
 public class Hand<T> : IHand<T>
