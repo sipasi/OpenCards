@@ -37,7 +37,7 @@ public class Deck<T>(IReadOnlyList<T> datas, IIndexCollection indexes) : IDeck<T
 
     public void Reset() => indexes.ResetIndex();
 
-    public virtual void OnShuffled(IReadOnlyList<T> datas, IReadonlyIndexCollection indexes) { }
+    protected virtual void OnShuffled(IReadOnlyList<T> datas, IReadonlyIndexCollection indexes) { }
 
     public IEnumerator<T> GetEnumerator()
     {
