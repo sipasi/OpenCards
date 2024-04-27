@@ -19,6 +19,7 @@
     <ProjectReference Include="..\..\shared\OpenCards.Collections.Maps\OpenCards.Collections.Maps.csproj" />
     <ProjectReference Include="..\..\shared\OpenCards.Collections.Players\OpenCards.Collections.Players.csproj" />
     <ProjectReference Include="..\..\shared\OpenCards.Observables\OpenCards.Observables.csproj" />
+    <ProjectReference Include="..\..\shared\OpenCards.States\OpenCards.States.csproj" />
   </ItemGroup>
 
 </Project>
